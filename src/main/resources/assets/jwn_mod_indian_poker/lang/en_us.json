@@ -1,0 +1,26 @@
+{
+  "message.jwn_mod_indian_poker.set_opponent": "message.jwn_mod_indian_poker.set_opponent",
+  "message.jwn_mod_indian_poker.set_opponent_to_target": "message.jwn_mod_indian_poker.set_opponent_to_target",
+
+  "message.jwn_mod_indian_poker.reset_opponent": "message.jwn_mod_indian_poker.reset_opponent",
+  "message.jwn_mod_indian_poker.reset_opponent_to_target": "message.jwn_mod_indian_poker.reset_opponent_to_target",
+
+  "message.jwn_mod_indian_poker.get_opponent": "message.jwn_mod_indian_poker.get_opponent",
+  "message.jwn_mod_indian_poker.get_opponent_not_in_game": "message.jwn_mod_indian_poker.get_opponent_not_in_game",
+
+  "message.jwn_mod_indian_poker.accept_player": "message.jwn_mod_indian_poker.accept_player",
+  "message.jwn_mod_indian_poker.accept_target": "message.jwn_mod_indian_poker.accept_target",
+  "message.jwn_mod_indian_poker.accept_failed": "message.jwn_mod_indian_poker.accept_failed",
+
+  "message.jwn_mod_indian_poker.stop_battle": "message.jwn_mod_indian_poker.stop_battle",
+
+  "message.jwn_mod_indian_poker.lets_compete": "message.jwn_mod_indian_poker.lets_compete",
+  "message.jwn_mod_indian_poker.lets_compete_opponent": "message.jwn_mod_indian_poker.lets_compete_opponent",
+
+  "error.jwn_mod_indian_poker.one_opponent": "error.jwn_mod_indian_poker.one_opponent",
+  "error.jwn_mod_indian_poker.player_opponent": "error.jwn_mod_indian_poker.player_opponent",
+
+  "error.jwn_mod_indian_poker.battle": "error.jwn_mod_indian_poker.battle",
+  "error.jwn_mod_indian_poker.cant_set_you": "error.jwn_mod_indian_poker.cant_set_you",
+  "error.jwn_mod_indian_poker.opponent_empty": "error.jwn_mod_indian_poker.opponent_empty"
+}
