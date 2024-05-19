@@ -9,6 +9,7 @@ import java.util.UUID;
 import java.util.function.Supplier;
 
 public class SetPlayerS2CPacket {
+    // opponent 를 client data 에도 추가, loading 시작
     UUID targetUUID;
 
     public SetPlayerS2CPacket(UUID targetUUID) {

@@ -27,10 +27,12 @@ public class AcceptPlayerS2CPacket {
         NetworkEvent.Context context = supplier.get();
         context.enqueueWork(() -> {
             // HERE WE ARE ON THE CLIENT!
-            Minecraft.getInstance().player.getPersistentData().putUUID(Main.MOD_ID + "_opponent", targetUUID);
             Minecraft.getInstance().player.getPersistentData().putBoolean(Main.MOD_ID + "_battle", true);
-
-            // battle gui
+            Minecraft.getInstance().player.getPersistentData().putInt(Main.MOD_ID + "_coin", 50);
+            Minecraft.getInstance().player.getPersistentData().putBoolean(Main.MOD_ID + "_turn", false);
+            Minecraft.getInstance().player.getPersistentData().putInt(Main.MOD_ID + "_bet", 0);
+            Minecraft.getInstance().player.getPersistentData().putInt(Main.MOD_ID + "_will_bet", 0);
+            Minecraft.getInstance().player.getPersistentData().putUUID(Main.MOD_ID + "_opponent", targetUUID);
         });
         return true;
     }

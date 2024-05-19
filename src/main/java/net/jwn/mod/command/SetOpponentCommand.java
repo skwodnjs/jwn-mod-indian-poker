@@ -42,7 +42,7 @@ public class SetOpponentCommand {
                 // 오케이 그러면 그렇게 설정해줄게.
                 player.getPersistentData().putUUID(Main.MOD_ID + "_opponent", target.getUUID());
                 ModMessages.sendToPlayer(new SetPlayerS2CPacket(target.getUUID()), (ServerPlayer) player);
-                ModMessages.sendToPlayer(new SetTargetS2CPacket(), (ServerPlayer) target);
+                ModMessages.sendToPlayer(new SetTargetS2CPacket(player.getUUID()), (ServerPlayer) target);
             }
         }
         return Command.SINGLE_SUCCESS;

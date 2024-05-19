@@ -3,6 +3,7 @@ package net.jwn.mod.client;
 import net.jwn.mod.Main;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.language.I18n;
+import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Player;
 import net.minecraftforge.client.gui.overlay.IGuiOverlay;
@@ -32,7 +33,9 @@ public class ToastHudOverlay {
 
         guiGraphics.drawString(Minecraft.getInstance().font, I18n.get("message." + Main.MOD_ID + ".lets_compete"),
                 x + 10, 7, 0x000000, false);
-//        String opponent_name = Minecraft.getInstance().level.getPlayerByUUID(player.getPersistentData().getUUID(Main.MOD_ID + "_opponent")).getName().getString();
-//        guiGraphics.drawString(Minecraft.getInstance().font, I18n.get("message.mod_players_2.lets_compete_opponent", opponent_name), x + 10, 18, 0x000000, false);
+        if (player.getPersistentData().hasUUID(Main.MOD_ID + "_sender")) {
+            String opponent_name = Minecraft.getInstance().level.getPlayerByUUID(player.getPersistentData().getUUID(Main.MOD_ID + "_sender")).getName().getString();
+            guiGraphics.drawString(Minecraft.getInstance().font, Component.translatable("message."+ Main.MOD_ID + ".lets_compete_opponent", opponent_name), x + 10, 18, 0x000000, false);
+        }
     });
 }

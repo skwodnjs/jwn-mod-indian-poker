@@ -68,6 +68,18 @@ public class ModMessages {
                 .encoder(AcceptPlayerS2CPacket::toBytes)
                 .consumerMainThread(AcceptPlayerS2CPacket::handle)
                 .add();
+
+        net.messageBuilder(AfterBetC2SPacket.class, id(), NetworkDirection.PLAY_TO_SERVER)
+                .decoder(AfterBetC2SPacket::new)
+                .encoder(AfterBetC2SPacket::toBytes)
+                .consumerMainThread(AfterBetC2SPacket::handle)
+                .add();
+
+        net.messageBuilder(TurnSyncS2CPacket.class, id(), NetworkDirection.PLAY_TO_CLIENT)
+                .decoder(TurnSyncS2CPacket::new)
+                .encoder(TurnSyncS2CPacket::toBytes)
+                .consumerMainThread(TurnSyncS2CPacket::handle)
+                .add();
     }
 
     public static <MSG> void sendToServer(MSG message) {

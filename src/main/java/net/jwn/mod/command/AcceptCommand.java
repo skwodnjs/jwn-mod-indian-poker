@@ -49,6 +49,18 @@ public class AcceptCommand {
                     target.getPersistentData().putBoolean(Main.MOD_ID + "_battle", true);
                     player.getPersistentData().putBoolean(Main.MOD_ID + "_battle", true);
 
+                    target.getPersistentData().putInt(Main.MOD_ID + "_coin", 50);
+                    player.getPersistentData().putInt(Main.MOD_ID + "_coin", 50);
+
+                    target.getPersistentData().putInt(Main.MOD_ID + "_bet", 0);
+                    player.getPersistentData().putInt(Main.MOD_ID + "_bet", 0);
+
+                    target.getPersistentData().putInt(Main.MOD_ID + "_will_bet", 0);
+                    player.getPersistentData().putInt(Main.MOD_ID + "_will_bet", 0);
+
+                    target.getPersistentData().putBoolean(Main.MOD_ID + "_turn", true);
+                    player.getPersistentData().putBoolean(Main.MOD_ID + "_turn", false);
+
                     player.getPersistentData().putUUID(Main.MOD_ID + "_opponent", target.getUUID());
 
                     ModMessages.sendToPlayer(new AcceptPlayerS2CPacket(target.getUUID()), (ServerPlayer) player);
