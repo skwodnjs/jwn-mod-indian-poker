@@ -1,6 +1,7 @@
 package net.jwn.mod.event;
 
 import net.jwn.mod.Main;
+import net.jwn.mod.client.IndianPokerHudOverlay;
 import net.jwn.mod.client.LoadingHudOverlay;
 import net.jwn.mod.client.ToastHudOverlay;
 import net.jwn.mod.networking.ModMessages;
@@ -41,6 +42,7 @@ public class ClientEvents {
         public static void onRegisterGuiOverlaysEvent(RegisterGuiOverlaysEvent event) {
             event.registerAboveAll("toast_hud", ToastHudOverlay.TOAST_HUD);
             event.registerAboveAll("loading_hud", LoadingHudOverlay.LOADING_HUD);
+            event.registerAboveAll("indian_poker_hud", IndianPokerHudOverlay.INDIAN_POKER_HUD);
         }
     }
 }
